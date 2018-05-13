@@ -89,9 +89,9 @@
 		5880F65920A3D84F00FA5395 = {
 			isa = PBXGroup;
 			children = (
-				5880F66420A3D84F00FA5395 /* Reciper Keeper */,
-				5880F67B20A3D85000FA5395 /* Reciper KeeperTests */,
-				5880F68620A3D85000FA5395 /* Reciper KeeperUITests */,
+				5880F66420A3D84F00FA5395 /* Recipe Keeper */,
+				5880F67B20A3D85000FA5395 /* Recipe KeeperTests */,
+				5880F68620A3D85000FA5395 /* Recipe KeeperUITests */,
 				5880F66320A3D84F00FA5395 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -106,7 +106,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		5880F66420A3D84F00FA5395 /* Reciper Keeper */ = {
+		5880F66420A3D84F00FA5395 /* Recipe Keeper */ = {
 			isa = PBXGroup;
 			children = (
 				5880F69B20A8336800FA5395 /* Recipe.swift */,
@@ -117,25 +117,25 @@
 				5880F67020A3D85000FA5395 /* LaunchScreen.storyboard */,
 				5880F67320A3D85000FA5395 /* Info.plist */,
 			);
-			path = "Reciper Keeper";
+			path = "Recipe Keeper";
 			sourceTree = "<group>";
 		};
-		5880F67B20A3D85000FA5395 /* Reciper KeeperTests */ = {
+		5880F67B20A3D85000FA5395 /* Recipe KeeperTests */ = {
 			isa = PBXGroup;
 			children = (
 				5880F67C20A3D85000FA5395 /* Reciper_KeeperTests.swift */,
 				5880F67E20A3D85000FA5395 /* Info.plist */,
 			);
-			path = "Reciper KeeperTests";
+			path = "Recipe KeeperTests";
 			sourceTree = "<group>";
 		};
-		5880F68620A3D85000FA5395 /* Reciper KeeperUITests */ = {
+		5880F68620A3D85000FA5395 /* Recipe KeeperUITests */ = {
 			isa = PBXGroup;
 			children = (
 				5880F68720A3D85000FA5395 /* Reciper_KeeperUITests.swift */,
 				5880F68920A3D85000FA5395 /* Info.plist */,
 			);
-			path = "Reciper KeeperUITests";
+			path = "Recipe KeeperUITests";
 			sourceTree = "<group>";
 		};
 		5880F6A120A8738B00FA5395 /* View */ = {
@@ -230,7 +230,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 5880F65D20A3D84F00FA5395 /* Build configuration list for PBXProject "Reciper Keeper" */;
+			buildConfigurationList = 5880F65D20A3D84F00FA5395 /* Build configuration list for PBXProject "Recipe Keeper" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -579,7 +579,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5880F65D20A3D84F00FA5395 /* Build configuration list for PBXProject "Reciper Keeper" */ = {
+		5880F65D20A3D84F00FA5395 /* Build configuration list for PBXProject "Recipe Keeper" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5880F68A20A3D85100FA5395 /* Debug */,
