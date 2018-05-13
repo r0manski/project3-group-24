@@ -84,7 +84,7 @@
                                     <outlet property="RecipeCuisine" destination="geX-Uz-TtJ" id="Iq6-3i-UYB"/>
                                     <outlet property="RecipeTime" destination="AqC-O6-IHT" id="Dsl-up-WdE"/>
                                     <outlet property="RecipeTitle" destination="W66-iL-qdS" id="zld-u5-zpl"/>
-                                    <segue destination="A4C-xX-Q5U" kind="show" identifier="ViewRecipe" id="Du3-Qh-w3v"/>
+                                    <segue destination="eed-3A-5bp" kind="show" identifier="ViewRecipe" id="hGB-8E-vbp"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -93,7 +93,13 @@
                             <outlet property="delegate" destination="BzM-Eg-jPv" id="r0b-uh-yYT"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Recipe List" id="C2y-8K-zTK"/>
+                    <navigationItem key="navigationItem" title="Recipe List" id="C2y-8K-zTK">
+                        <barButtonItem key="rightBarButtonItem" title="Add" id="92z-Uu-XdS">
+                            <connections>
+                                <segue destination="A4C-xX-Q5U" kind="presentation" id="Ky7-6p-6Ec"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="searchDisplayController" destination="1X9-Mw-nGt" id="2NU-D7-nVA"/>
                     </connections>
@@ -140,15 +146,21 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UBz-2B-N8g" userLabel="Content area">
                                                     <rect key="frame" x="20" y="0.0" width="275" height="44"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="coh-hw-QKc">
-                                                            <rect key="frame" x="8" y="12" width="88" height="21"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="coh-hw-QKc">
+                                                            <rect key="frame" x="10" y="10" width="275" height="24"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="coh-hw-QKc" secondAttribute="trailing" constant="-10" id="32T-fe-5ul"/>
+                                                        <constraint firstAttribute="bottom" secondItem="coh-hw-QKc" secondAttribute="bottom" constant="10" id="S9x-TW-PYO"/>
+                                                        <constraint firstItem="coh-hw-QKc" firstAttribute="leading" secondItem="UBz-2B-N8g" secondAttribute="leading" constant="10" id="ULd-um-Wnb"/>
+                                                        <constraint firstItem="coh-hw-QKc" firstAttribute="width" secondItem="UBz-2B-N8g" secondAttribute="width" id="imU-Yy-g0B"/>
+                                                        <constraint firstItem="coh-hw-QKc" firstAttribute="top" secondItem="UBz-2B-N8g" secondAttribute="top" constant="10" id="jNH-vK-UHc"/>
+                                                    </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NTX-hp-qNQ" userLabel="Action area">
                                                     <rect key="frame" x="295" y="0.0" width="80" height="44"/>
@@ -178,12 +190,17 @@
                                         </stackView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="iAE-Ei-E7V" firstAttribute="height" secondItem="GHJ-pk-h2Z" secondAttribute="height" id="IzN-qU-rwX"/>
                                         <constraint firstItem="iAE-Ei-E7V" firstAttribute="centerY" secondItem="GHJ-pk-h2Z" secondAttribute="centerY" id="Ooc-dY-l0E"/>
                                         <constraint firstItem="iAE-Ei-E7V" firstAttribute="centerX" secondItem="GHJ-pk-h2Z" secondAttribute="centerX" id="Pw2-zJ-ZpR"/>
                                         <constraint firstItem="iAE-Ei-E7V" firstAttribute="width" secondItem="GHJ-pk-h2Z" secondAttribute="width" id="nSI-kb-A0X"/>
+                                        <constraint firstItem="iAE-Ei-E7V" firstAttribute="height" secondItem="GHJ-pk-h2Z" secondAttribute="height" id="yNe-YX-pED"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="Action" destination="bzM-vO-b4D" id="o2d-HX-xxt"/>
+                                    <outlet property="StepDescription" destination="coh-hw-QKc" id="vdJ-eC-gG0"/>
+                                    <outlet property="StepTagColor" destination="K4B-w4-qza" id="7Dx-gC-noD"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -202,11 +219,12 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SCF-ph-JK4" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="pw5-1D-TPH" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3405.5999999999999" y="-335.08245877061472"/>
+            <point key="canvasLocation" x="3090" y="-335"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="MsX-o7-hQ8">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jNM-dP-D8l" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="A4C-xX-Q5U" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Zxm-Yd-vM8">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -216,9 +234,8 @@
                         <segue destination="eed-3A-5bp" kind="relationship" relationship="rootViewController" id="7LZ-9V-Nt2"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jNM-dP-D8l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2455" y="-335"/>
+            <point key="canvasLocation" x="2308" y="152"/>
         </scene>
         <!--Recipe List-->
         <scene sceneID="E5T-GX-mht">
@@ -299,4 +316,7 @@
         <image name="Account" width="32" height="32"/>
         <image name="Recipes" width="32" height="32"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="7LZ-9V-Nt2"/>
+    </inferredMetricsTieBreakers>
 </document>

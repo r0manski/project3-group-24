@@ -10,9 +10,15 @@ import UIKit
 
 class RecipeController: UITableViewController {
     var currentRecipe: Recipe!
+    var steps: [String] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.title = currentRecipe.name
+        self.navigationItem.title = currentRecipe.name
+        let sampleSteps = ["Cook paster", "Chop tomatoes and onions", "Season minced beef"]
+        steps = sampleSteps
+        //tableView.estimatedRowHeight = 50
+        tableView.rowHeight = UITableViewAutomaticDimension
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -28,23 +34,32 @@ class RecipeController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
+    /*
+        override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 0
     }
-
+    */
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        if section == 0 {
+            return steps.count
+        } else {
+            return 0
+        }
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
+        let cell = tableView.dequeueReusableCell(withIdentifier:
+            "InstructionItem", for: indexPath) as! InstructionCell
+        let step = steps[indexPath.row]
+        cell.updateInstruction(stepNumber: indexPath.row, detail: step)
+        cell.showsReorderControl = false
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
