@@ -121,13 +121,13 @@
         <scene sceneID="dJ6-6f-klv">
             <objects>
                 <tableViewController title="Recipe" id="eed-3A-5bp" customClass="RecipeController" customModule="Reciper_Keeper" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="o0k-TZ-hKa">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="o0k-TZ-hKa">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="InstructionItem" id="kri-WS-7PN" customClass="InstructionCell" customModule="Reciper_Keeper" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kri-WS-7PN" id="GHJ-pk-h2Z">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -165,20 +165,18 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NTX-hp-qNQ" userLabel="Action area">
                                                     <rect key="frame" x="295" y="0.0" width="80" height="44"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Action" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bzM-vO-b4D">
-                                                            <rect key="frame" x="0.0" y="0.0" width="80" height="44.5"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DUa-9W-Sfo">
+                                                            <rect key="frame" x="0.0" y="0.0" width="80" height="44"/>
+                                                            <state key="normal" title="Action"/>
+                                                        </button>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
-                                                        <constraint firstItem="bzM-vO-b4D" firstAttribute="height" secondItem="NTX-hp-qNQ" secondAttribute="height" id="5dt-ED-Dxg"/>
-                                                        <constraint firstItem="bzM-vO-b4D" firstAttribute="width" secondItem="NTX-hp-qNQ" secondAttribute="width" id="RdT-2F-Onb"/>
-                                                        <constraint firstItem="bzM-vO-b4D" firstAttribute="centerY" secondItem="NTX-hp-qNQ" secondAttribute="centerY" id="Xid-Mx-D6I"/>
+                                                        <constraint firstItem="DUa-9W-Sfo" firstAttribute="centerY" secondItem="NTX-hp-qNQ" secondAttribute="centerY" id="1co-b0-c42"/>
+                                                        <constraint firstItem="DUa-9W-Sfo" firstAttribute="height" secondItem="NTX-hp-qNQ" secondAttribute="height" id="AHW-GC-hxB"/>
+                                                        <constraint firstAttribute="width" secondItem="DUa-9W-Sfo" secondAttribute="width" id="Nb3-7h-WIx"/>
                                                         <constraint firstAttribute="width" constant="80" id="cvZ-W9-3wn"/>
-                                                        <constraint firstItem="bzM-vO-b4D" firstAttribute="centerX" secondItem="NTX-hp-qNQ" secondAttribute="centerX" id="qSL-Pq-yp1"/>
+                                                        <constraint firstItem="DUa-9W-Sfo" firstAttribute="centerX" secondItem="NTX-hp-qNQ" secondAttribute="centerX" id="ee8-Hk-flp"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -197,7 +195,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="Action" destination="bzM-vO-b4D" id="o2d-HX-xxt"/>
+                                    <outlet property="Action" destination="DUa-9W-Sfo" id="ol7-JS-w39"/>
                                     <outlet property="StepDescription" destination="coh-hw-QKc" id="vdJ-eC-gG0"/>
                                     <outlet property="StepTagColor" destination="K4B-w4-qza" id="7Dx-gC-noD"/>
                                 </connections>
@@ -208,9 +206,18 @@
                             <outlet property="delegate" destination="eed-3A-5bp" id="yt8-qo-OVa"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Recipe" id="a1W-XG-Bpy"/>
+                    <navigationItem key="navigationItem" title="Recipe" id="a1W-XG-Bpy">
+                        <barButtonItem key="backBarButtonItem" title="Recipe List" id="6U8-9t-Ksx"/>
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="d38-a7-3Mx">
+                            <connections>
+                                <segue destination="Ldh-Vq-YAO" kind="unwind" unwindAction="unwindToRecipeList:" id="zyq-bu-pSq"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Reset" id="l4x-VT-c8U"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SCF-ph-JK4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Ldh-Vq-YAO" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3030" y="-335"/>
         </scene>
@@ -339,37 +346,10 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Ingredient" id="ri5-0M-Ndk">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="InstructionItem" rowHeight="100" id="uvU-jS-vRG" customClass="InstructionCell" customModule="Reciper_Keeper" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="155.5" width="375" height="100"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uvU-jS-vRG" id="szQ-6m-n2W">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="MmB-K3-VCS">
-                                                    <rect key="frame" x="20" y="0.0" width="335" height="99.5"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                </textView>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="MmB-K3-VCS" firstAttribute="top" secondItem="szQ-6m-n2W" secondAttribute="top" id="Cgb-cH-mRr"/>
-                                                <constraint firstAttribute="trailing" secondItem="MmB-K3-VCS" secondAttribute="trailing" constant="20" id="I7D-9i-7rE"/>
-                                                <constraint firstAttribute="height" secondItem="MmB-K3-VCS" secondAttribute="height" id="f8E-Yb-Tnj"/>
-                                                <constraint firstItem="MmB-K3-VCS" firstAttribute="leading" secondItem="szQ-6m-n2W" secondAttribute="leading" constant="20" id="ttv-eD-bOa"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                            <tableViewSection headerTitle="Instruction" id="sze-Cz-eEA">
+                            <tableViewSection headerTitle="Ingredient" id="sze-Cz-eEA" userLabel="Ingredient">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="InstructionItem" rowHeight="60" id="6if-95-bVs" customClass="InstructionCell" customModule="Reciper_Keeper" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="311.5" width="375" height="60"/>
+                                        <rect key="frame" x="0.0" y="155.5" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6if-95-bVs" id="yTJ-z2-ILO">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
@@ -404,6 +384,44 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
+                            <tableViewSection headerTitle="Instruction" id="GUd-SL-WzU">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="InstructionItem" rowHeight="60" id="9wY-z6-DFo" customClass="InstructionCell" customModule="Reciper_Keeper" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="271.5" width="375" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9wY-z6-DFo" id="dM0-3x-DrH">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="uZV-2N-Qz7">
+                                                    <rect key="frame" x="20" y="-0.5" width="335" height="59.5"/>
+                                                    <subviews>
+                                                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WTJ-Kd-g1a">
+                                                            <rect key="frame" x="0.0" y="0.0" width="275" height="59.5"/>
+                                                            <nil key="textColor"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <textInputTraits key="textInputTraits"/>
+                                                        </textField>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XY1-77-FQZ" userLabel="Add">
+                                                            <rect key="frame" x="295" y="0.0" width="40" height="59.5"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="40" id="JQ6-zV-ibE"/>
+                                                            </constraints>
+                                                            <state key="normal" image="Add"/>
+                                                        </button>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="uZV-2N-Qz7" firstAttribute="top" secondItem="dM0-3x-DrH" secondAttribute="top" constant="-0.5" id="GBR-dP-BRx"/>
+                                                <constraint firstItem="uZV-2N-Qz7" firstAttribute="height" secondItem="dM0-3x-DrH" secondAttribute="height" id="YBf-qm-fRR"/>
+                                                <constraint firstItem="uZV-2N-Qz7" firstAttribute="leading" secondItem="dM0-3x-DrH" secondAttribute="leading" constant="20" id="geo-rN-b9K"/>
+                                                <constraint firstAttribute="trailing" secondItem="uZV-2N-Qz7" secondAttribute="trailing" constant="20" id="w8d-Xt-jDK"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
                         </sections>
                         <connections>
                             <outlet property="dataSource" destination="Je9-Zc-EmQ" id="JIB-aX-l6v"/>
@@ -419,7 +437,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Save" id="wx1-MD-3rH">
                             <connections>
-                                <segue destination="eed-3A-5bp" kind="show" id="QJZ-iw-5pP"/>
+                                <segue destination="eed-3A-5bp" kind="show" identifier="SaveRecipe" id="nkg-sN-FOk"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -436,6 +454,6 @@
         <image name="Recipes" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="QJZ-iw-5pP"/>
+        <segue reference="7LZ-9V-Nt2"/>
     </inferredMetricsTieBreakers>
 </document>

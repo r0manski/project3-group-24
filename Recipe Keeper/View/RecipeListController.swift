@@ -13,7 +13,7 @@ class RecipeListController: UITableViewController {
     let sampleName = "Spaghetti"
     let sampleTime = 120
     let sampleCuisine = Cuisine.Italian
-    let sampleIngredient = "paster 1 pack, 6 tomatoes"
+    let sampleIngredient = ["pasta 1 pack", "6 tomatoes"]
     var recipes: [Recipe] = []
     
     @IBAction func unwindToRecipeList(_ unwindSegue: UIStoryboardSegue) {

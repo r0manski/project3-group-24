@@ -10,9 +10,17 @@ import UIKit
 
 class AddRecipeController: UITableViewController {
 
+    //fake data
+    let sampleName = "Spaghetti"
+    let sampleTime = 120
+    let sampleCuisine = Cuisine.Italian
+    let sampleIngredient = ["pasta 1 pack", "6 tomatoes"]
+    var recipes: [Recipe] = []
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -88,14 +96,14 @@ class AddRecipeController: UITableViewController {
     }
     */
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if segue.identifier == "SaveRecipe" {
+            let sampleRecipe = Recipe(sampleName, sampleIngredient, sampleTime, sampleCuisine)
+            let recipeViewController = segue.destination as! RecipeController
+            recipeViewController.currentRecipe = sampleRecipe
+        }
     }
-    */
 
 }
