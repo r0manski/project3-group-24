@@ -29,12 +29,18 @@ class AddRecipeController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 3
     }
-
+    
+    let numberOfRowsAtSection: [Int] = [1, 1, 1]
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        var rows: Int = 0
+        
+        if section < numberOfRowsAtSection.count {
+            rows = numberOfRowsAtSection[section]
+        }
+        return rows
     }
 
     /*
