@@ -9,7 +9,7 @@
 import Foundation
 
 protocol Ingredient {
-    var ingredient: [String: String] { get set}
+    var ingredient: String { get set}
 }
 
 struct Instruction {
@@ -27,12 +27,12 @@ enum Cuisine: String {
 
 class Recipe: Ingredient {
     var name: String
-    var ingredient: [String : String]
+    var ingredient: String
     var instruction: Instruction?
     var time: Int
     var cuisine: Cuisine
     
-    init (_ name: String, _ ingredient: [String: String], _ time: Int, _ cuisine: Cuisine) {
+    init (_ name: String, _ ingredient: String, _ time: Int, _ cuisine: Cuisine) {
         self.name = name
         self.ingredient = ingredient
         self.time = time
