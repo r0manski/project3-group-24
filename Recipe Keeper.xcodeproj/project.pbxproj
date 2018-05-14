@@ -22,7 +22,6 @@
 		5880F6A020A8730000FA5395 /* InstructionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5880F69F20A8730000FA5395 /* InstructionCell.swift */; };
 		5880F6A320A8880000FA5395 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5880F6A220A8880000FA5395 /* Info.plist */; };
 		5880F6A520A905F800FA5395 /* AddRecipeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5880F6A420A905F800FA5395 /* AddRecipeController.swift */; };
-		5880F6A720A9515300FA5395 /* IngredientViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5880F6A620A9515300FA5395 /* IngredientViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,7 +62,6 @@
 		5880F69F20A8730000FA5395 /* InstructionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionCell.swift; sourceTree = "<group>"; };
 		5880F6A220A8880000FA5395 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5880F6A420A905F800FA5395 /* AddRecipeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecipeController.swift; sourceTree = "<group>"; };
-		5880F6A620A9515300FA5395 /* IngredientViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,7 +147,6 @@
 				5880F69520A3DB1800FA5395 /* RecipeListController.swift */,
 				5880F69920A4852B00FA5395 /* RecipeItemCell.swift */,
 				5880F69720A3DE5D00FA5395 /* RecipeController.swift */,
-				5880F6A620A9515300FA5395 /* IngredientViewCell.swift */,
 				5880F69F20A8730000FA5395 /* InstructionCell.swift */,
 				5880F66920A3D84F00FA5395 /* AccountController.swift */,
 				5880F66520A3D84F00FA5395 /* AppDelegate.swift */,
@@ -300,7 +297,6 @@
 				5880F69C20A8336800FA5395 /* Recipe.swift in Sources */,
 				5880F69820A3DE5D00FA5395 /* RecipeController.swift in Sources */,
 				5880F6A520A905F800FA5395 /* AddRecipeController.swift in Sources */,
-				5880F6A720A9515300FA5395 /* IngredientViewCell.swift in Sources */,
 				5880F69A20A4852B00FA5395 /* RecipeItemCell.swift in Sources */,
 				5880F69620A3DB1800FA5395 /* RecipeListController.swift in Sources */,
 			);

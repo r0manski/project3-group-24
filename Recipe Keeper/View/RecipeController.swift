@@ -10,20 +10,13 @@ import UIKit
 
 class RecipeController: UITableViewController {
     var currentRecipe: Recipe!
-    var ingredients: [String] = ["1 pack of pasta", "500g tomatoes"]
-    
-    var steps: [Step] = []
-    let step1 = Step("Cook pasta", true, 10)
-    let step2 = Step("Chop tomatoes and onions", false, 0)
-    let step3 = Step("Season minced beef", false, 0)
-    
+    var steps: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = currentRecipe.name
-        steps.append(step1)
-        steps.append(step2)
-        steps.append(step3)
+        let sampleSteps = ["Cook paster", "Chop tomatoes and onions", "Season minced beef"]
+        steps = sampleSteps
         //tableView.estimatedRowHeight = 50
         tableView.rowHeight = UITableViewAutomaticDimension
 
@@ -41,12 +34,12 @@ class RecipeController: UITableViewController {
 
     // MARK: - Table view data source
 
-    
+    /*
         override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 2
+        return 0
     }
-    
+    */
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
@@ -59,23 +52,11 @@ class RecipeController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        
-        //Display ingredients
-        if indexPath.section == 0 {
-            let instructionCell = tableView.dequeueReusableCell(withIdentifier:
-                "InstructionItem", for: indexPath) as! IngredientViewCell
-            let ingredient = ingredients[indexPath.row]
-        }
-        // Display instruction
-        else if indexPath.section == 1 {
-            let instructionCell = tableView.dequeueReusableCell(withIdentifier:
+        let cell = tableView.dequeueReusableCell(withIdentifier:
             "InstructionItem", for: indexPath) as! InstructionCell
-            let step = steps[indexPath.row]
-            instructionCell.updateInstruction(stepNumber: indexPath.row, detail: step)
-            instructionCell.showsReorderControl = false
-            return cell
-        }
+        let step = steps[indexPath.row]
+        cell.updateInstruction(stepNumber: indexPath.row, detail: step)
+        cell.showsReorderControl = false
         return cell
     }
     
