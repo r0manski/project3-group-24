@@ -1,0 +1,6 @@
+framework module Pods_Reciper_KeeperUITests {
+  umbrella header "Pods-Reciper KeeperUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
