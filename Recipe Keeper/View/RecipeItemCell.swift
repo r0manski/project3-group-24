@@ -19,7 +19,7 @@ class RecipeItemCell: UITableViewCell {
     func updateRecipeList (with recipe: Recipe) {
         RecipeTitle.text = recipe.name
         RecipeTime.text = String(recipe.time) + " minutes"
-        RecipeCuisine.text = recipe.cuisine.rawValue
+        RecipeCuisine.text = recipe.cuisine.value
     }
     
     override func awakeFromNib() {

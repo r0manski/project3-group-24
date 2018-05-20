@@ -24,15 +24,34 @@ class RecipeListController: UITableViewController {
         super.viewDidLoad()
         tableView.rowHeight = 100
         
-
-
+        /// function save
+        let first = Recipe.save("AAAAA", ingredient: "THIS IS ingredient A", time: 120, cuisine: .Australian)
+        Recipe.save("BBBBB", ingredient: "THIS IS ingredient B", time: 120, cuisine: .Chinese)
+        Recipe.save("ccccc", ingredient: "THIS IS ingredient C", time: 120, cuisine: .Thai)
+        Recipe.save("DDDD", ingredient: "THIS IS ingredient D", time: 120, cuisine: .Australian)
+        Recipe.save("EEEEEEE", ingredient: "THIS IS ingredient E", time: 120, cuisine: .Australian)
+        Recipe.save("recipe", ingredient: "this is 1", time: 90, cuisine: .Thai)
+        
+        
+        /// get all data
+        self.recipes = Recipe.getAllRecipes()
+        
+        /// add step
+        Instruction.save(first, content: "first, add the xxx to yyy, then ^^^^……………………", time: "30")
+        Instruction.save(first, content: "second, add the xxx to yyy, then ^^^^……………………", time: "60")
+        Instruction.save(first, content: "third, add the xxx to yyy, then ^^^^……………………", time: "100")
+        
+        /// load all Instruction from first recipe
+        let steps = Instruction.getInstructionsByRecipe(first)
+        print(steps)
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
-        let sampleRecipe = Recipe(sampleName, sampleIngredient, sampleTime, sampleCuisine)
-        recipes.append(sampleRecipe)
+//        let sampleRecipe = Recipe(sampleName, sampleIngredient, sampleTime, sampleCuisine)
+//        recipes.append(sampleRecipe)
     }
 
     override func didReceiveMemoryWarning() {

@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B341DA420ADB82400456E59 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B341DA220ADB82300456E59 /* Realm.framework */; };
+		4B341DA520ADB82400456E59 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4B341DA220ADB82300456E59 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4B341DA620ADB82400456E59 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B341DA320ADB82400456E59 /* RealmSwift.framework */; };
+		4B341DA720ADB82400456E59 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4B341DA320ADB82400456E59 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4B341DA920ADBE4900456E59 /* Instruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B341DA820ADBE4900456E59 /* Instruction.swift */; };
 		5880F66620A3D84F00FA5395 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5880F66520A3D84F00FA5395 /* AppDelegate.swift */; };
 		5880F66A20A3D84F00FA5395 /* AccountController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5880F66920A3D84F00FA5395 /* AccountController.swift */; };
 		5880F66D20A3D84F00FA5395 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5880F66B20A3D84F00FA5395 /* Main.storyboard */; };
@@ -41,7 +46,25 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		4B341D9920ADB6B500456E59 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				4B341DA720ADB82400456E59 /* RealmSwift.framework in Embed Frameworks */,
+				4B341DA520ADB82400456E59 /* Realm.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		4B341DA220ADB82300456E59 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = "Recipe Keeper/Frameworks/Realm.framework"; sourceTree = "<group>"; };
+		4B341DA320ADB82400456E59 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = "Recipe Keeper/Frameworks/RealmSwift.framework"; sourceTree = "<group>"; };
+		4B341DA820ADBE4900456E59 /* Instruction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instruction.swift; sourceTree = "<group>"; };
 		5880F66220A3D84F00FA5395 /* Reciper Keeper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Reciper Keeper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5880F66520A3D84F00FA5395 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5880F66920A3D84F00FA5395 /* AccountController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountController.swift; sourceTree = "<group>"; };
@@ -69,6 +92,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B341DA620ADB82400456E59 /* RealmSwift.framework in Frameworks */,
+				4B341DA420ADB82400456E59 /* Realm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,9 +114,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4B341D9020ADB63200456E59 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
 		5880F65920A3D84F00FA5395 = {
 			isa = PBXGroup;
 			children = (
+				4B341DA220ADB82300456E59 /* Realm.framework */,
+				4B341DA320ADB82400456E59 /* RealmSwift.framework */,
 				5880F66420A3D84F00FA5395 /* Recipe Keeper */,
 				5880F67B20A3D85000FA5395 /* Recipe KeeperTests */,
 				5880F68620A3D85000FA5395 /* Recipe KeeperUITests */,
@@ -112,7 +146,9 @@
 		5880F66420A3D84F00FA5395 /* Recipe Keeper */ = {
 			isa = PBXGroup;
 			children = (
+				4B341D9020ADB63200456E59 /* Frameworks */,
 				5880F69B20A8336800FA5395 /* Recipe.swift */,
+				4B341DA820ADBE4900456E59 /* Instruction.swift */,
 				5880F69D20A8699300FA5395 /* BrandColor.swift */,
 				5880F6A120A8738B00FA5395 /* View */,
 				5880F66B20A3D84F00FA5395 /* Main.storyboard */,
@@ -165,6 +201,7 @@
 				5880F65E20A3D84F00FA5395 /* Sources */,
 				5880F65F20A3D84F00FA5395 /* Frameworks */,
 				5880F66020A3D84F00FA5395 /* Resources */,
+				4B341D9920ADB6B500456E59 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -298,6 +335,7 @@
 				5880F69820A3DE5D00FA5395 /* RecipeController.swift in Sources */,
 				5880F6A520A905F800FA5395 /* AddRecipeController.swift in Sources */,
 				5880F69A20A4852B00FA5395 /* RecipeItemCell.swift in Sources */,
+				4B341DA920ADBE4900456E59 /* Instruction.swift in Sources */,
 				5880F69620A3DB1800FA5395 /* RecipeListController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -471,7 +509,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ZK794X9FWS;
+				DEVELOPMENT_TEAM = SR2GBMXN6Z;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Recipe\\ Keeper/Frameworks",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Recipe Keeper/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "muchness25.com.Reciper-Keeper";
@@ -486,7 +529,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ZK794X9FWS;
+				DEVELOPMENT_TEAM = SR2GBMXN6Z;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Recipe\\ Keeper/Frameworks",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Recipe Keeper/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "muchness25.com.Reciper-Keeper";
