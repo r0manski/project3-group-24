@@ -1,4 +1,4 @@
-#Recepie Keeper
+# Recepie Keeper
 
 ## About
 
@@ -27,10 +27,10 @@ To clone and run this application, you'll need MacOS, [Git](https://git-scm.com)
 ```bash
 # Clone the repository
 $ git clone https://github.com/uts-ios-dev/project3-group-24
+```
+* Go into the repository in Finder and run Recipe Keeper.xcworkspace file.
 
-# Go into the repository in Finder and run Recipe Keeper.xcworkspace file.
-
-# Build and run.
+* Build and run the workspace.
 
 ## Coding Principals
 
@@ -49,4 +49,5 @@ $ git clone https://github.com/uts-ios-dev/project3-group-24
 
 * The frameworks and packages used in this project:
   - Realm (https://realm.io/)
+ 
   
